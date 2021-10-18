@@ -15,16 +15,6 @@ class CrudController extends Controller
         return view('crud.index');
     }
 
-    /**
-     * show all page
-     */
-    // public function showAllData()
-    // {
-        
-    //     return view('crud.all');
-       
-
-    // }
 
     /**
      * create data 
@@ -109,6 +99,18 @@ class CrudController extends Controller
             return redirect() -> back() -> with('success', 'Student Delete Successful');
 
         } 
+  
+        /** 
+         * Crud data edit
+         */
+        public function editData($id) 
+        {    
+            $edit_student = Crud::find($id);
+             return view('crud.edit', [
+                'student_edit'  => $edit_student,
+
+             ]);
+        }
 
 
 
