@@ -31,7 +31,7 @@
 			<div class="card-body edit-student">
 				<h2>Update {{ $student_edit  -> name }} Data</h2>
 				@include('validation')
-				<form action="{{ url('crud-add') }}" method="POST" enctype="multipart/form-data">
+				<form action="{{ url('crud-update/' . $student_edit  -> id ) }}" method="POST" enctype="multipart/form-data">
 					@csrf
 					<div class="form-group">
 						<label for="">Name</label>
@@ -58,7 +58,7 @@
 						<input name="new_photo" class="form-control" type="file">
 					</div>
 					<div class="form-group">
-						<input class="btn btn-primary" type="submit" value="Add">
+						<input class="btn btn-primary" type="submit" value="Update">
 					</div>
 				</form>
 			</div>

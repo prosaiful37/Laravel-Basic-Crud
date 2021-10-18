@@ -36,3 +36,4 @@ Route::get('crud-delete/{id}', 'CrudController@deleteData');
 
 //crud edit data 
 Route::get('crud-edit/{id}', 'CrudController@editData');
+Route::POST('crud-update/{id}', 'CrudController@updateData'); 
